@@ -11,8 +11,8 @@ Currently it runs as a web server and accepts HTTP or HTTPS requests to the /tri
 Currently users can be added and trigger pulls.
 
 ## Unimplemented features
--Add users as watchers of specific repositories.
--Notify watchers.
+- Add users as watchers of specific repositories.
+- Notify watchers.
 
 ## Licence
 MIT.
