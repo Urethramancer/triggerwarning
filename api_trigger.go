@@ -25,6 +25,10 @@ func apiTrigger(w http.ResponseWriter, r *http.Request) error {
 	name := q.Get("name")
 	name = strings.Trim(name, "\n ")
 	trigger := triggermap[name]
+	if trigger == nil {
+		return errors.New("unknown repository " + name)
+	}
+
 	info("Updating %s (%s) from %s", trigger.Name, trigger.Path, trigger.URL)
 	err := gitPull(trigger.Path)
 	return err
