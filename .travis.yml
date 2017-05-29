@@ -10,12 +10,12 @@ cache:
     - $GOPATH/pkg
 
 install:
-  - github.com/Urethramancer/cross
-  - github.com/Urethramancer/slog
-  - github.com/fsnotify/fsnotify
-  - github.com/gorilla/mux
-  - github.com/jessevdk/go-flags
-  - golang.org/x/crypto/sha3
-  - golang.org/x/crypto/ssh
-  - gopkg.in/src-d/go-git.v4
-  - gopkg.in/src-d/go-git.v4/plumbing/transport/ssh
+  - go get github.com/Urethramancer/cross
+  - go get github.com/Urethramancer/slog
+  - go get github.com/fsnotify/fsnotify
+  - go get github.com/gorilla/mux
+  - go get github.com/jessevdk/go-flags
+  - go get golang.org/x/crypto/sha3
+  - go get golang.org/x/crypto/ssh
+  - go get gopkg.in/src-d/go-git.v4
+  - go get gopkg.in/src-d/go-git.v4/plumbing/transport/ssh
