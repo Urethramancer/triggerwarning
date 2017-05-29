@@ -1,0 +1,21 @@
+language: go
+
+go:
+  - 1.8
+  - tip
+
+cache:
+  directories:
+    - $GOPATH/src
+    - $GOPATH/pkg
+
+install:
+  - github.com/Urethramancer/cross
+  - github.com/Urethramancer/slog
+  - github.com/fsnotify/fsnotify
+  - github.com/gorilla/mux
+  - github.com/jessevdk/go-flags
+  - golang.org/x/crypto/sha3
+  - golang.org/x/crypto/ssh
+  - gopkg.in/src-d/go-git.v4
+  - gopkg.in/src-d/go-git.v4/plumbing/transport/ssh
