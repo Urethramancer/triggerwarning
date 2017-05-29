@@ -1,4 +1,4 @@
-# Trigger Warning
+# Trigger Warning [![Build Status](https://travis-ci.org/Urethramancer/triggerwarning.svg?branch=master)](https://travis-ci.org/Urethramancer/triggerwarning)
 Pull Git repositories and notify watchers on trigger.
 
 ## Who or what is this for?
