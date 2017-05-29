@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+triggerwarning
+config.json
+*.log
+triggers/
+watchers/
+users/
