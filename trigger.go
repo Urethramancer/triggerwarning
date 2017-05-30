@@ -41,6 +41,7 @@ func createTrigger(name, url, path string, cli bool) error {
 		Name: name,
 		Path: path,
 		URL:  url,
+		CLI:  cli,
 	}
 
 	name = filepath.Join(cfg.Triggers, name)
