@@ -41,12 +41,7 @@ type AddTrigger struct {
 func (cmd *AddTrigger) Execute(args []string) error {
 	loadConfig()
 
-	var err error
-	if cmd.CLI {
-		err = createTrigger(cmd.Trigger.Name, cmd.Trigger.URL, cmd.Trigger.Path, true)
-	} else {
-		err = createTrigger(cmd.Trigger.Name, cmd.Trigger.URL, cmd.Trigger.Path, false)
-	}
+	err := createTrigger(cmd.Trigger.Name, cmd.Trigger.URL, cmd.Trigger.Path, cmd.CLI)
 
 	if err != nil {
 		crit("Couldn't create trigger: %s", err.Error())
