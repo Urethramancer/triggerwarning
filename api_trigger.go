@@ -30,6 +30,9 @@ func apiTrigger(w http.ResponseWriter, r *http.Request) error {
 	}
 
 	info("Updating %s (%s) from %s", trigger.Name, trigger.Path, trigger.URL)
-	err := gitPull(trigger.Path)
-	return err
+	if trigger.CLI {
+		return gitExternalPull(trigger.Path)
+	}
+
+	return gitPull(trigger.Path)
 }

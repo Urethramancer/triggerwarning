@@ -93,5 +93,14 @@ func gitExternalClone(url, path string) error {
 
 // gitExternalPull updates via the installed git command.
 func gitExternalPull(path string) error {
+	cmd := exec.Command("git", "-C", cfg.Repos, "pull")
+
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	err := cmd.Run()
+	if err != nil {
+		return err
+	}
+
 	return nil
 }
