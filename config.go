@@ -113,11 +113,8 @@ func loadConfig() {
 
 	name := opt.Config
 	if name == "" {
-		name, err = cross.GetConfigName(program, configname)
-		if err != nil {
-			crit("Error getting configuration: %s", err.Error())
-			os.Exit(2)
-		}
+		cross.SetConfigPath(program)
+		name = cross.ConfigName(configname)
 	}
 
 	if !cross.Exists(name) {
