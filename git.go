@@ -69,7 +69,12 @@ func gitPull(path string) error {
 		return err
 	}
 
-	err = repo.Pull(&o)
+	w, err := repo.Worktree()
+	if err != nil {
+		return err
+	}
+
+	w.Pull(&o)
 	return err
 }
 
