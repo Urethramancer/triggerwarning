@@ -74,6 +74,7 @@ func gitPull(path string) error {
 		return err
 	}
 
+	// src-d changed the API without bumping the version. Uncool.
 	w.Pull(&o)
 	return err
 }
