@@ -3,14 +3,11 @@ package main
 import (
 	"errors"
 	"io/ioutil"
-	"os/exec"
-
-	"golang.org/x/crypto/ssh"
-
 	"os"
-
+	"os/exec"
 	"path/filepath"
 
+	"golang.org/x/crypto/ssh"
 	"gopkg.in/src-d/go-git.v4"
 	gitssh "gopkg.in/src-d/go-git.v4/plumbing/transport/ssh"
 )
